@@ -3,6 +3,7 @@ package com.example.myappcm2024;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class ControlesBasicos extends AppCompatActivity {
+
+    TextView tv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,10 @@ public class ControlesBasicos extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        tv1 = findViewById(R.id.tvNombre);
+        String valor = getIntent().getStringExtra("nombre");
+        tv1.setText("Hola "+valor);
     }
 
     public void Regresar(View view)
