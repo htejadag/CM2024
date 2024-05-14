@@ -1,6 +1,8 @@
 package com.example.myappcm2024;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +23,12 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    public void Basicos(View view)
+    {
+        Intent i = new Intent(this, ControlesBasicos.class);
+        startActivity(i);
+        finish();
+    }
+
 }
